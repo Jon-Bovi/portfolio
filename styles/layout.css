@@ -1,0 +1,27 @@
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+header {
+  background: #e2e2e2;
+  padding: 16px;
+  margin: 0;
+  height: 100px;
+}
+
+section {
+  padding: 16px;
+}
+
+article {
+  background: #f1f1f1;
+  padding: 16px;
+}
+
+article p {
+  margin: 0 auto;
+}
