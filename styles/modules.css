@@ -32,6 +32,9 @@
   display: block;
 }
 
+.template {
+  display: none;
+}
 
 @media screen and (min-width: 570px) {
   .nav ul , .nav li, .nav:hover li{

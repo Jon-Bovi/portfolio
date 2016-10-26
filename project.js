@@ -1,18 +1,18 @@
 var projects = [];
 
-function Project(obj) {
-  this.title = obj.title;
-  this.imgsrc = obj.imgsrc;
-  this.caption = obj.caption;
-  this.date = obj.date;
+function Project(projObj) {
+  this.title = projObj.title;
+  this.imgsrc = projObj.imgsrc;
+  this.caption = projObj.caption;
+  this.date = projObj.date;
 };
 
 Project.prototype.toHTML = function() {
   var $newProject = $('li.template').clone();
-  $newProject.find('h3').text = this.title;
-  $newProject.find('h6').text = 'Finished: ' + this.date;
+  $newProject.find('h3').text(this.title);
+  $newProject.find('h6').text('Finished: ' + this.date);
   $newProject.find('img').attr('src', this.imgsrc);
-  $newProject.find('figcaption').text = this.caption;
+  $newProject.find('figcaption').text(this.caption);
 
   $newProject.removeClass();
   return $newProject;
