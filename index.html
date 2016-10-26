@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Ford Fowler, Wannabe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css" rel="stylesheet">
+    <link href="socicon/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
@@ -13,7 +13,7 @@
     <header>
       <h1 class="float-left">Ford Fowler</h1>
       <nav class="nav">
-        <div class="icon-burger">hamburger</div>
+        <div class="socicon-buffer"></div>
         <ul>
           <li><a href="#">Projects</a></li>
           <li><a href="#">About</a></li>
@@ -22,13 +22,21 @@
       </nav>
     </header>
     <main>
-      <section>
+      <section id="projects">
         <h2>Projects</h2>
         <ul>
-          <li>BusMall</li>
+          <li class="template">
+            <h3>Title</h3>
+            <h6>date finished</h6>
+            <figure>
+              <img src="" alt="" />
+              <figcaption>This project does blah blah blah</figcaption>
+          </figure>
+          </li>
+          <!-- <li>BusMall</li>
           <li>WhichBin</li>
-          <li>Salmon Cookies</li>
-          <li></li>
+          <li>Salmon Cookies</li> -->
+          <!-- <li></li> -->
         </ul>
       </section>
       <article>
@@ -40,11 +48,14 @@
       <section>
         <h2>Contact</h2>
         <ul>
-          <li><a href="https://github.com/Jon-Bovi" class="icon-github">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/ford-fowler-49b042127?trk=hp-identity-name" class="icon-linkedin">LinkedIn</a></li>
-          <li><a href="https://twitter.com/Dreadpudding" class="icon-twitter">Twitter</a></li>
+          <li><a href="https://github.com/Jon-Bovi" class="socicon-github">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/ford-fowler-49b042127?trk=hp-identity-name" class="socicon-linkedin">LinkedIn</a></li>
+          <li><a href="https://twitter.com/Dreadpudding" class="socicon-twitter">Twitter</a></li>
         </ul>
       </section>
     </main>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <script src="projectData.js"></script>
+   <script src="project.js"></script>
   </body>
 </html>
