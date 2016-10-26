@@ -8,7 +8,7 @@ function Project(projObj) {
 };
 
 Project.prototype.toHTML = function() {
-  var $newProject = $('li.template').clone();
+  var $newProject = $('.template').clone();
   $newProject.find('h3').text(this.title);
   $newProject.find('h6').text('Finished: ' + this.date);
   $newProject.find('img').attr('src', this.imgsrc);
@@ -22,6 +22,18 @@ projectData.forEach(function(proj) {
   projects.push(new Project(proj));
 });
 
+$projects = $('.project-carousel');
+
 projects.forEach(function(proj) {
-  $('#projects ul').append(proj.toHTML());
+  $projects.append(proj.toHTML());
+});
+
+$projects.find('.template').remove();
+
+$projects.slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  adaptiveHeight: true
 });

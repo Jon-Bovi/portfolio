@@ -1,6 +1,11 @@
+header h1 {
+  font-size: 250%;
+  margin: 20px;
+}
+
 .nav {
   float: right;
-  min-width: 100px;
+  /*min-width: 100px;*/
   height: auto;
   text-align: left;
 }
@@ -8,12 +13,16 @@
 .nav ul {
   display: none;
   background: snow;
-  border: 2px solid darkgray;
+  border-top: 2px solid gray;
+  border-bottom: 2px solid gray;
   margin: 0;
   padding: 5px;
-  padding-left: 15px;
   height: 84px;
   font-size: 117%;
+}
+
+.socicon- {
+  font-size: 150%;
 }
 
 .socicon-buffer {
@@ -36,6 +45,24 @@
   display: none;
 }
 
+.project-carousel {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.project-carousel div {
+  text-align: center;
+}
+
+section#contact ul {
+  text-align: center;
+  margin: 20px auto;
+  padding:0;
+  line-height: 3;
+  /*max-width: auto;*/
+  display: block;
+}
+
 @media screen and (min-width: 570px) {
   .nav ul , .nav li, .nav:hover li{
     display: inline-block;
@@ -43,15 +70,17 @@
   }
   .nav ul {
     margin-top: 28px;
-    width: 100%;
-    margin-right: 16px;
   }
   .nav li {
     /*padding: 0 1.6em;*/
     min-width: 80px;
-    width:
+    text-align: center;
   }
   .socicon-buffer {
     display: none;
+  }
+  section#contact li {
+    display: inline-block;
+    padding: 20px;
   }
 }

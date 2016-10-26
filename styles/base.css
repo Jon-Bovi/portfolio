@@ -1,6 +1,14 @@
+* {
+  font-family: Questrial, sans-serif;
+}
+
 html {
   padding: 0px;
   margin: 0px;
+}
+
+img {
+  width: 100%;
 }
 
 body {
@@ -26,6 +34,18 @@ li {
 
 p {
   max-width: 80%;
+  margin: 16px auto;
+  margin-bottom: 0;
+  padding-bottom: 16px;
+}
+
+section h2, article h2 {
+  padding: 20px 0 20px 3em;
+  margin: 0;
+  background: #444;
+  color: snow;
+  font-family: Exo;
+  border-top: 3px solid #8899bb;
 }
 
 @font-face {

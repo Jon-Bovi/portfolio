@@ -7,21 +7,20 @@
 }
 
 header {
-  background: #e2e2e2;
+  background: snow;
   padding: 16px;
   margin: 0;
   height: 100px;
 }
 
 section {
-  padding: 16px;
+  padding: 0em;
+}
+
+#projects {
+  height: 100%;
 }
 
 article {
   background: #f1f1f1;
-  padding: 16px;
-}
-
-article p {
-  margin: 0 auto;
 }
