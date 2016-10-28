@@ -1,6 +1,14 @@
+* {
+  font-family: Questrial, sans-serif;
+}
+
 html {
   padding: 0px;
   margin: 0px;
+}
+
+img {
+  width: 100%;
 }
 
 body {
@@ -26,6 +34,13 @@ li {
 
 p {
   max-width: 80%;
+  margin: 16px auto;
+  margin-bottom: 0;
+  padding-bottom: 16px;
+}
+
+figcaption {
+  margin-top: 10px;
 }
 
 @font-face {
