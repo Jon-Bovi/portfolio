@@ -39,13 +39,8 @@ p {
   padding-bottom: 16px;
 }
 
-section h2, article h2 {
-  padding: 20px 0 20px 3em;
-  margin: 0;
-  background: #444;
-  color: snow;
-  font-family: Exo;
-  border-top: 3px solid #8899bb;
+figcaption {
+  margin-top: 10px;
 }
 
 @font-face {

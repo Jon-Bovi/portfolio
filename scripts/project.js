@@ -8,14 +8,9 @@ function Project(projObj) {
 };
 
 Project.prototype.toHTML = function() {
-  var $newProject = $('.template').clone();
-  $newProject.find('h3').text(this.title);
-  $newProject.find('h6').text('Finished: ' + this.date);
-  $newProject.find('img').attr('src', this.imgsrc);
-  $newProject.find('figcaption').text(this.caption);
-
-  $newProject.removeClass();
-  return $newProject;
+  var template = $('#project-template').html();
+  var templateRender = Handlebars.compile(template);
+  return templateRender(this);
 };
 
 projectData.forEach(function(proj) {

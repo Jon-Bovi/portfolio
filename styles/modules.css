@@ -63,6 +63,15 @@ section#contact ul {
   display: block;
 }
 
+.section-header {
+  padding: 20px 0 20px 3em;
+  margin: 0;
+  background: #444;
+  color: snow;
+  font-family: Exo;
+  border-top: 3px solid #8899bb;
+}
+
 @media screen and (min-width: 570px) {
   .nav ul , .nav li, .nav:hover li{
     display: inline-block;

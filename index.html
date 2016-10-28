@@ -11,6 +11,16 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
+    <script id="project-template" type="text/x-handlebars-template">
+      <div>
+        <h3>{{title}}</h3>
+        <h6>{{date}}</h6>
+        <figure>
+          <img src="{{imgsrc}}" alt="" />
+          <figcaption>{{{caption}}}</figcaption>
+        </figure>
+      </div>
+    </script>
   </head>
 
   <body>
@@ -31,28 +41,19 @@
         <iframe src="vendor/with-jquery.html"></iframe>
       </div> -->
       <section id="projects" class="navtab-content">
-        <h2>Projects</h2>
-        <div class="project-carousel">
-          <div class="template">
-            <h3>Title</h3>
-            <h6>date finished</h6>
-            <figure>
-              <img src="" alt="" />
-              <figcaption>This project does blah blah blah</figcaption>
-            </figure>
-          </div>
-        </div>
+        <h2 class="section-header">Projects</h2>
+        <div class="project-carousel"></div>
       </section>
 
       <article id="about" class="navtab-content">
-        <h2>About</h2>
+        <h2 class="section-header">About</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </article>
 
       <section id="contact" class="navtab-content">
-        <h2>Contact</h2>
+        <h2 class="section-header">Contact</h2>
         <ul>
           <li><a href="https://github.com/Jon-Bovi" class="socicon-github"> GitHub</a></li>
           <li><a href="https://www.linkedin.com/in/ford-fowler-49b042127?trk=hp-identity-name" class="socicon-linkedin"> LinkedIn</a></li>
@@ -62,6 +63,7 @@
     </main>
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
    <script type="text/javascript" src="slick/slick.min.js"></script>
    <script src="scripts/projectData.js"></script>
    <script src="scripts/project.js"></script>
