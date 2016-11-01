@@ -1,5 +1,3 @@
-var projects = [];
-
 function Project(projObj) {
   this.title = projObj.title;
   this.imgsrc = projObj.imgsrc;
@@ -7,30 +5,34 @@ function Project(projObj) {
   this.date = projObj.date;
 };
 
+Project.projects = [];
+
 Project.prototype.toHTML = function() {
   var template = $('#project-template').html();
   var templateRender = Handlebars.compile(template);
   return templateRender(this);
 };
 
-projectData.forEach(function(proj) {
-  projects.push(new Project(proj));
-});
+Project.loadAll = function(inputData) {
+  inputData.forEach(function(proj) {
+    Project.projects.push(new Project(proj));
+  });
+};
 
-$projects = $('.project-carousel');
-
-projects.forEach(function(proj) {
-  $projects.append(proj.toHTML());
-});
-
-$projects.find('.template').remove();
-
-$projects.slick({
-  dots: true,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 1,
-  adaptiveHeight: true,
-  autoplay: true,
-  autoplaySpeed: 6000,
-});
+Project.fetchAll = function() {
+  // TODO
+    /* When our data is already in localStorage:
+    1. We can process and load it,
+    2. Then we can render the index page.  */
+    /* Without our localStorage in memory, we need to:
+    1. Retrieve our JSON file with $.getJSON
+    1.a Load our json data
+    1.b Store that data in localStorage so that we can skip the server call next time,
+    1.c And then render the index page.*/
+  console.log('Try fetch');
+  $.get('../projects.json', function(data, message, xhr) {
+    console.log('FETCHING');
+    Project.loadAll(data);
+    viewController.render();
+  });
+};
