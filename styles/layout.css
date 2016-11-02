@@ -19,6 +19,7 @@ section {
 
 #projects {
   height: 100%;
+  min-height: 493px;
 }
 
 article {

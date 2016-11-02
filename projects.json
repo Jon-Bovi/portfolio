@@ -3,7 +3,10 @@
     "title": "BusMall",
     "imgsrc": "images/BusMall.png",
     "caption": "Product research quiz #marketing #<a target='_blank' href='https://jon-bovi.github.io/BusMall/'>BusMall</a>",
-    "date": "October 9th, 2016"
+    "date": "October 9th, 2016",
+    "html": 34,
+    "js": 268,
+    "css": 116
   },
   {
     "title": "WhichBin",
