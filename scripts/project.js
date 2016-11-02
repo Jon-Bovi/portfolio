@@ -1,10 +1,12 @@
 (function(module) {
 
   function Project(projObj) {
-    this.title = projObj.title;
-    this.imgsrc = projObj.imgsrc;
-    this.caption = projObj.caption;
-    this.date = projObj.date;
+    for (var key in projObj) {
+      this[key] = projObj[key];
+    }
+    for (var key in this.code) {
+      this.codehtml = this.codehtml + '<p>'+ key + ': ' + this.code[key] + ' lines</p>';
+    }
   };
 
   Project.projects = [];
@@ -39,20 +41,8 @@
           Project.loadAll(JSON.parse(localStorage.getItem('projectData')));
           viewController.renderProjects();
         }
-
       }
     });
-    // TODO
-      /* When our data is already in localStorage:
-      1. We can process and load it,
-      2. Then we can render the index page.  */
-      /* Without our localStorage in memory, we need to:
-      1. Retrieve our JSON file with $.getJSON
-      1.a Load our json data
-      1.b Store that data in localStorage so that we can skip the server call next time,
-      1.c And then render the index page.*/
-    console.log('Try fetch');
-
   };
 
   module.Project = Project;

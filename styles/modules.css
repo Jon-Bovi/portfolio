@@ -54,6 +54,18 @@ header h1 {
   text-align: center;
 }
 
+.project-carousel h6 {
+  position: relative;
+  top: -20px;
+  margin: 0 auto;
+}
+
+#code-stats p {
+  margin: 0 auto;
+  padding: 0;
+  font-size: .9em;
+}
+
 section#contact ul {
   text-align: center;
   margin: 20px auto;
