@@ -40,7 +40,7 @@ a.socicon-twitter:hover {
 .socicon-buffer {
   font-size: 180%;
   float:right;
-  margin-top: 28px;
+  margin-top: 23px;
   color: #aaddff;
 }
 
@@ -128,7 +128,8 @@ a.socicon-twitter:hover {
 section#contact ul {
   text-align: center;
   margin: 20px auto;
-  padding:0;
+  /*padding:0;*/
+  padding: 20px;
   line-height: 3;
   /*max-width: auto;*/
   display: block;

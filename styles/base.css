@@ -67,6 +67,5 @@ figcaption {
 @media screen and (min-width: 570px) {
   li {
     display: inline-block;
-    padding: 20px;
   }
 }
