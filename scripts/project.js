@@ -11,10 +11,10 @@
 
   Project.projects = [];
 
-  Project.prototype.toHTML = function() {
-    var template = $('#project-template').html();
+  Project.toHTML = function(whichStuff, whichTemplate) {
+    var template = $(whichTemplate).html();
     var templateRender = Handlebars.compile(template);
-    return templateRender(this);
+    return templateRender(whichStuff);
   };
 
   Project.loadAll = function(inputData) {
@@ -43,6 +43,36 @@
         }
       }
     });
+  };
+
+  Project.makeCodeStatsArray = function(project) {
+    var array = [];
+    for (var lang in project.code) {
+      array.push(project.code[lang]);
+    }
+    return array;
+  };
+
+  Project.totalLinesOfCode = function() {
+    return Project.projects.map(function(project) {
+      return Project.makeCodeStatsArray(project).reduce(function(sum,cur,idx,array) {
+        return cur + sum;
+      });
+    })
+    .reduce(function(sum,cur,idx,array) {
+      return cur + sum;
+    });
+  };
+
+  Project.linesOfCode = function() {
+    var obj = {html:0,js:0,css:0};
+    Project.projects.forEach(function(proj) {
+      for (var key in proj.code) {
+        obj[key] += proj.code[key];
+      }
+    });
+    obj.total = Project.totalLinesOfCode();
+    return obj;
   };
 
   module.Project = Project;

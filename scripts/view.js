@@ -1,5 +1,5 @@
 (function(module) {
-  
+
   var viewController = {};
 
   viewController.handleNav = function() {
@@ -12,8 +12,9 @@
 
   viewController.renderProjects = function() {
     $projects = $('.project-carousel');
+    $projects.hide();
     Project.projects.forEach(function(proj) {
-      $projects.append(proj.toHTML());
+      $projects.append(Project.toHTML(proj, '#project-template'));
     });
     $projects.slick({
       dots: true,
@@ -24,6 +25,8 @@
       autoplay: true,
       autoplaySpeed: 6000,
     });
+    $('#codestats').append(Project.toHTML(Project.linesOfCode(), '#codestats-template'));
+    $projects.fadeIn();
   };
 
   module.viewController = viewController;

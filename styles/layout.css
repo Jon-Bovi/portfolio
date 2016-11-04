@@ -22,6 +22,10 @@ section {
   min-height: 493px;
 }
 
+#codestats {
+  background: #eaeff2;
+}
+
 article {
   background: #f1f1f1;
 }
