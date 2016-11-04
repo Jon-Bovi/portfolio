@@ -26,6 +26,17 @@
         </figure>
       </div>
     </script>
+    <script id="codestats-template" type="text/x-handlebars-template">
+      <h4>Lines of Code</h4>
+      <hr>
+      <ul>
+        <li>HTML: <span class="number">{{html}}</span></li>
+        <li>JavaScript: <span class="number">{{js}}</span></li>
+        <li>CSS: <span class="number">{{css}}</span></li>
+      </ul>
+      <hr>
+      <p>Total: <span class="number">{{total}}</span></p>
+    </script>
   </head>
 
   <body>
@@ -48,6 +59,7 @@
       <section id="projects" class="navtab-content">
         <h2 class="section-header">Projects</h2>
         <div class="project-carousel"></div>
+        <section id="codestats"></section>
       </section>
 
       <article id="about" class="navtab-content">
