@@ -19,8 +19,13 @@ section {
 
 #projects {
   height: 100%;
+  min-height: 493px;
 }
 
 article {
   background: #f1f1f1;
+}
+
+#projects, #about, #contact {
+  border-top: 4px solid #dddfff;
 }

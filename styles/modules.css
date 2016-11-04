@@ -21,16 +21,27 @@ header h1 {
   font-size: 117%;
 }
 
-.socicon- {
-  font-size: 150%;
+[class*="socicon-"]::before {
+  font-size: 200%;
+}
+
+a.socicon-github:hover {
+  color: #4078c0;
+}
+
+a.socicon-linkedin:hover {
+  color: #006fa6;
+}
+
+a.socicon-twitter:hover {
+  color: #1dcaff;
 }
 
 .socicon-buffer {
-  font: sans-serif;
   font-size: 180%;
   float:right;
   margin-top: 28px;
-  color: seagreen;
+  color: #aaddff;
 }
 
 .nav:hover .socicon-buffer {
@@ -47,11 +58,43 @@ header h1 {
 
 .project-carousel {
   margin: 0 auto;
-  width: 70%;
+  width: 80%;
 }
 
 .project-carousel div {
   text-align: center;
+}
+
+.description {
+  display: none;
+  height: 0px;
+  z-index: 5;
+  position: relative;
+  top:15vw;
+  left:0%;
+  font-size: 3vw;
+  padding:0;
+  margin: 0;
+}
+
+.hover-block:hover .project-image {
+  opacity: .2;
+}
+
+.hover-block:hover .description {
+  display: block;
+}
+
+.project-carousel h6 {
+  position: relative;
+  top: -20px;
+  margin: 0 auto;
+}
+
+#code-stats p {
+  margin: 0 auto;
+  padding: 0;
+  font-size: .9em;
 }
 
 section#contact ul {

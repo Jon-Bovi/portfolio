@@ -17,6 +17,12 @@ body {
   color: #313131;
   padding: 0;
   margin: 0;
+  min-width: 300px;
+}
+
+h3 {
+  font-size: 140%;
+  margin-bottom: 0;
 }
 
 a, a:link, a:active{
@@ -37,6 +43,10 @@ p {
   margin: 16px auto;
   margin-bottom: 0;
   padding-bottom: 16px;
+}
+
+figure {
+  margin-top: 0;
 }
 
 figcaption {
