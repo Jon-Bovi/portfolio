@@ -14,10 +14,14 @@
     <script id="project-template" type="text/x-handlebars-template">
       <div>
         <h3>{{title}}</h3>
-        <h6>{{date}}</h6>
-        <section id="code-stats">{{{codehtml}}}</section>
         <figure>
-          <img src="{{imgsrc}}" alt="" />
+          <div class="hover-block">
+            <div class="description">
+              <h6>{{date}}</h6>
+              <section id="code-stats">{{{codehtml}}}</section>
+            </div>
+            <img src="{{imgsrc}}" class="project-image"/>
+          </div>
           <figcaption>{{{caption}}}</figcaption>
         </figure>
       </div>
@@ -26,7 +30,7 @@
 
   <body>
     <header>
-      <h1 class="float-left">Ford Fowler</h1>
+      <h1 class="float-left"><a href="">Ford Fowler</a></h1>
       <nav class="nav">
         <div class="socicon-buffer"></div>
         <ul>
@@ -48,9 +52,7 @@
 
       <article id="about" class="navtab-content">
         <h2 class="section-header">About</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <p>My name is Ford Fowler, and I'm an aspiring web developer. I've managed to reach the critical age of 24 in much the same way most people do: stumbling blindly. My childhood was split between Colorado and Southern California, both outdoor wonderlands for a kid. Fall of 2010, I went to college at UC Berkeley, but quickly withdrew to take time to discover what I actually wanted to do. Later I studied and researched Geology at Colorado State University, but after taking a few programming classes a strong hankering to learn coding engulfed me. When I discovered <a href="https://www.codefellows.org/">Code Fellows</a> I jumped, packed my car, and shipped my life to Seattle.</p>
       </article>
 
       <section id="contact" class="navtab-content">
