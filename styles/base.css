@@ -5,6 +5,7 @@
 html {
   padding: 0px;
   margin: 0px;
+  /*min-width: 365px;*/
 }
 
 img {
@@ -17,7 +18,7 @@ body {
   color: #313131;
   padding: 0;
   margin: 0;
-  min-width: 300px;
+  width: 100%;
 }
 
 h3 {
@@ -39,7 +40,7 @@ li {
 }
 
 p {
-  max-width: 80%;
+  width: 80%;
   margin: 16px auto;
   margin-bottom: 0;
   padding-bottom: 16px;
