@@ -1,5 +1,6 @@
-page('/', navController.reveal(home));
-page('/projects', navController.reveal(projects));
-page('/about', navController.reveal(about));
-page('/contact', navController.reveal(contact));
+page('/', navController.revealAll);
+page('/projects', navController.revealProjects);
+page('/about', navController.revealAbout);
+page('/contact', navController.revealContact);
+
 page();
