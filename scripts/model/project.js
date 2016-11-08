@@ -26,11 +26,11 @@
   Project.fetchAll = function() {
     $.ajax({
       type: 'HEAD',
-      url: '../projects.json',
+      url: '../../data/projects.json',
       success: function(data, message, xhr) {
         if (!localStorage.eTag || localStorage.eTag !== xhr.getResponseHeader('ETag')) {
           console.log('load new data');
-          $.getJSON('../projects.json', function(data) {
+          $.getJSON('../../data/projects.json', function(data) {
             localStorage.setItem('eTag', xhr.getResponseHeader('ETag'));
             localStorage.setItem('projectData', JSON.stringify(data));
             Project.loadAll(data);
