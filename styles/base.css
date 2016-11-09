@@ -5,6 +5,7 @@
 html {
   padding: 0px;
   margin: 0px;
+  /*min-width: 365px;*/
 }
 
 img {
@@ -17,7 +18,7 @@ body {
   color: #313131;
   padding: 0;
   margin: 0;
-  min-width: 300px;
+  width: 100%;
 }
 
 h3 {
@@ -39,7 +40,7 @@ li {
 }
 
 p {
-  max-width: 80%;
+  width: 80%;
   margin: 16px auto;
   margin-bottom: 0;
   padding-bottom: 16px;
@@ -55,11 +56,11 @@ figcaption {
 
 @font-face {
   font-family: "socicon";
-  src:url("fonts/socicon.eot");
-  src:url("fonts/socicon.eot?#iefix") format("embedded-opentype"),
-    url("fonts/socicon.woff") format("woff"),
-    url("fonts/socicon.ttf") format("truetype"),
-    url("fonts/socicon.svg#socicon") format("svg");
+  src:url("../vendor/socicon/fonts/socicon.eot");
+  src:url("../vendor/socicon/fonts/socicon.eot?#iefix") format("embedded-opentype"),
+    url("../vendor/socicon/fonts/socicon.woff") format("woff"),
+    url("../vendor/socicon/fonts/socicon.ttf") format("truetype"),
+    url("../vendor/socicon/fonts/socicon.svg#socicon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -67,6 +68,5 @@ figcaption {
 @media screen and (min-width: 570px) {
   li {
     display: inline-block;
-    padding: 20px;
   }
 }

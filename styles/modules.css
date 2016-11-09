@@ -40,7 +40,7 @@ a.socicon-twitter:hover {
 .socicon-buffer {
   font-size: 180%;
   float:right;
-  margin-top: 28px;
+  margin-top: 23px;
   color: #aaddff;
 }
 
@@ -65,8 +65,8 @@ a.socicon-twitter:hover {
   text-align: center;
 }
 
-.project-carousel button {
-  display: none;
+.project-carousel button.slick-arrow {
+  display: none !important;
 }
 
 .description {
@@ -127,11 +127,16 @@ a.socicon-twitter:hover {
 
 section#contact ul {
   text-align: center;
-  margin: 20px auto;
-  padding:0;
+  margin: 30px auto 0 auto;
+  /*padding:0;*/
+  padding: 20px;
   line-height: 3;
   /*max-width: auto;*/
   display: block;
+}
+
+section#contact li {
+  margin-bottom: 30px;
 }
 
 .section-header {
@@ -164,8 +169,8 @@ section#contact ul {
     width: 84%;
   }
 
-  .project-carousel button {
-    display: block;
+  .project-carousel button.slick-arrow {
+    display: block !important;
   }
   #codestats ul {
     width:76%;
@@ -187,6 +192,10 @@ section#contact ul {
   }
 
   #codestats p {
+  }
+
+  #contact li {
+    margin: 0 2em;
   }
 
 }

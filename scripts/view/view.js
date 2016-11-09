@@ -2,14 +2,6 @@
 
   var viewController = {};
 
-  viewController.handleNav = function() {
-    $('.navtab').click(function() {
-      $('.navtab-content').hide();
-      which = $(this).attr('data-content');
-      $('#' + which).fadeIn();
-    });
-  };
-
   viewController.renderProjects = function() {
     $projects = $('.project-carousel');
     $projects.hide();
@@ -26,12 +18,10 @@
       autoplaySpeed: 6000,
     });
     $('#codestats').append(Project.toHTML(Project.linesOfCode(), '#codestats-template'));
-    $projects.fadeIn();
+    $projects.hide().fadeIn();
   };
 
   module.viewController = viewController;
 
-  viewController.handleNav();
   Project.fetchAll();
-
 })(window);
