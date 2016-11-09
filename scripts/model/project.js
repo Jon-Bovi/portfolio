@@ -34,12 +34,12 @@
             localStorage.setItem('eTag', xhr.getResponseHeader('ETag'));
             localStorage.setItem('projectData', JSON.stringify(data));
             Project.loadAll(data);
-            viewController.renderProjects();
+            github.requestEvents(viewController.renderProjects);
           });
         } else {
           console.log('load from local');
           Project.loadAll(JSON.parse(localStorage.getItem('projectData')));
-          viewController.renderProjects();
+          github.requestEvents(viewController.renderProjects);
         }
       }
     });
