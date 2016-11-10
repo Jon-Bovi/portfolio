@@ -3,7 +3,7 @@
   github.events = [];
 
   github.requestEvents = function(next) {
-    $.get('/users/jon-bovi/events', function (data) {
+    $.get('github/users/jon-bovi/events', function (data) {
       github.events = data;
       next();
     });
