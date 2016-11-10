@@ -4,7 +4,6 @@
 
   viewController.renderProjects = function() {
     $projects = $('.project-carousel');
-    $projects.hide();
     Project.projects.forEach(function(proj) {
       $projects.append(Project.toHTML(proj, '#project-template'));
     });
@@ -17,8 +16,12 @@
       autoplay: true,
       autoplaySpeed: 6000,
     });
-    $('#codestats').append(Project.toHTML(Project.linesOfCode(), '#codestats-template'));
     $projects.hide().fadeIn();
+    $('#codestats').append(Project.toHTML(Project.linesOfCode(), '#codestats-template'));
+    $events = $('#events');
+    github.events.forEach(function (evenT) {
+      $events.append(Project.toHTML(evenT, '#event-template'));
+    });
   };
 
   module.viewController = viewController;
