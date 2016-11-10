@@ -42,11 +42,9 @@
     <script id="event-template" type="text/x-handlebars-template">
       <h3>{{type}}</h3>
       <h5>    {{created_at}}</h5>
-      {{#if type === 'PushEvent'}}
         {{#each payload.commits}}
           <p>    {{message}}</p>
         {{/each}}
-      {{/if}}
     </script>
   </head>
 
